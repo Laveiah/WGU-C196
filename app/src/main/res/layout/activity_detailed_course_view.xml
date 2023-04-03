@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".UI.DetailedCourseView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.DetailedCourseView">
+
+        <Switch
+            android:id="@+id/editCourseDetailEndReminderSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:text="End Date Reminder"
+            app:layout_constraintBottom_toTopOf="@+id/courseDetailsSaveButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toEndOf="@+id/editCourseDetailStartReminderSwitch"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:id="@+id/editCourseDetailStartReminderSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="Start Date Reminder"
+            app:layout_constraintBottom_toTopOf="@+id/courseDetailDeleteButton"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Button
+            android:id="@+id/courseDetailsSaveButton"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="4dp"
+            android:text="Save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/addAssessmentText"
+            android:layout_width="269dp"
+            android:layout_height="48dp"
+            android:text="Course Details"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.001" />
+
+        <TextView
+            android:id="@+id/courseDetailTitleViewText"
+            android:layout_width="130dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="84dp"
+            android:text="Course Title:"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/courseDetailStartDateText"
+            android:layout_width="134dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="36dp"
+            android:text="Start Date:"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/courseDetailEndDateText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/courseDetailEndDateText"
+            android:layout_width="132dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="24dp"
+            android:text="End Date:"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/courseDetailInstructorNameText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/courseDetailStatusSpinnerText"
+            android:layout_width="142dp"
+            android:layout_height="36dp"
+            android:text="Course Status:"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/courseDetailNotesText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courseDetailTitleViewText"
+            app:layout_constraintVertical_bias="0.474" />
+
+        <EditText
+            android:id="@+id/editCourseDetailTitleViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Course Title"
+            app:layout_constraintBottom_toTopOf="@+id/courseDetailStatusSpinnerField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toEndOf="@+id/courseDetailTitleViewText"
+            app:layout_constraintTop_toBottomOf="@+id/addAssessmentText" />
+
+        <EditText
+            android:id="@+id/editCourseDetailStartDateField"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="28dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="mm/dd/yyyy"
+            app:layout_constraintBottom_toTopOf="@+id/editCourseDetailEndDateField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/courseDetailStartDateText"
+            tools:ignore="TextFields" />
+
+        <Spinner
+            android:id="@+id/courseDetailStatusSpinnerField"
+            android:layout_width="209dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Spinner"
+            app:layout_constraintBottom_toTopOf="@+id/editCourseDetailNoteField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toEndOf="@+id/courseDetailStatusSpinnerText" />
+
+        <EditText
+            android:id="@+id/editCourseDetailEndDateField"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:inputType="date"
+            android:text="mm/dd/yyyy"
+            app:layout_constraintBottom_toTopOf="@+id/editCourseDetailInstructorPersonNameField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/courseDetailEndDateText" />
+
+        <TextView
+            android:id="@+id/courseDetailInstructorNameText"
+            android:layout_width="138dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="24dp"
+            android:text="Course Instructor:"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/courseDetailInstructorPhoneText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/courseDetailInstructorPhoneText"
+            android:layout_width="140dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="20dp"
+            android:text="Instructor Phone:"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/courseDetailInstructorEmailText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/courseDetailInstructorEmailText"
+            android:layout_width="137dp"
+            android:layout_height="58dp"
+            android:layout_marginBottom="20dp"
+            android:text="Instructor Email:"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editCourseDetailStartReminderSwitch"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editCourseDetailInstructorPersonNameField"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="28dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintBottom_toTopOf="@+id/editCourseDetailInstructorPhoneField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toEndOf="@+id/courseDetailInstructorNameText" />
+
+        <EditText
+            android:id="@+id/editCourseDetailInstructorPhoneField"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="36dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:text="xxx-xxx-xxxx"
+            app:layout_constraintBottom_toTopOf="@+id/editCourseDetailInstructorEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/courseDetailInstructorPhoneText" />
+
+        <EditText
+            android:id="@+id/editCourseDetailInstructorEmailAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginBottom="28dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:text="Email"
+            app:layout_constraintBottom_toTopOf="@+id/editCourseDetailEndReminderSwitch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.468"
+            app:layout_constraintStart_toEndOf="@+id/courseDetailInstructorEmailText" />
+
+        <TextView
+            android:id="@+id/courseDetailNotesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginBottom="40dp"
+            android:text="Notes:"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/courseDetailStartDateText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editCourseDetailNoteField"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Enter Notes "
+            app:layout_constraintBottom_toTopOf="@+id/editCourseDetailStartDateField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.603"
+            app:layout_constraintStart_toEndOf="@+id/courseDetailNotesText" />
+
+        <Button
+            android:id="@+id/courseDetailDeleteButton"
+            android:layout_width="139dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="4dp"
+            android:onClick="detailCourseDelete"
+            android:text="delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.066"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>

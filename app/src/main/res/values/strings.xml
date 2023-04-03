@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">C196</string>
+    <string name="add_sample_data">Add Sample Data</string>
+    <string name="share">share</string>
+    <string name="notify_start">notify_start</string>
+    <string name="notify_end">notify_end</string>
+    <string name="channel_name">c195Channel</string>
+    <string name="channel_description">Notifications for C195 Live App</string>
+    <string-array name="courseStatus">
+        <item>In progress</item>
+        <item>Completed</item>
+        <item>Dropped</item>
+        <item>Planned to take</item>
+    </string-array>
+
+    <string-array name="assessmentType">
+        <item>Objective</item>
+        <item>Performance</item>
+    </string-array>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".UI.ListOfAssessments">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.ListOfAssessments">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listOfAssessmentRecyclerView"
+        android:layout_width="414dp"
+        android:layout_height="484dp"
+        android:layout_marginTop="36dp"
+        android:onClick="detailedAssessmentViewScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listOfAssessmentTextView" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionToDetailedAssessment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="assessmentDetailList"
+        android:onClick="detailedAssessmentViewScreen"
+        app:backgroundTint="#81553AB7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.957"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <TextView
+        android:id="@+id/listOfAssessmentTextView"
+        android:layout_width="295dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="8dp"
+        android:text="Please select an assessment below to edit/delete. If you dont see any, click the + button in the top right corner to add an assessment"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listOfAssessmentTitleView" />
+
+    <TextView
+        android:id="@+id/listOfAssessmentTitleView"
+        android:layout_width="241dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="80dp"
+        android:text="ASSESSMENTS"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

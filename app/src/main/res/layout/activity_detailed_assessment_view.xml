@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".UI.DetailedAssessmentView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.DetailedAssessmentView">
+
+    <TextView
+        android:id="@+id/assessmentDetailedNameText"
+        android:layout_width="133dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="56dp"
+        android:text="Assessment Name:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/assessmentDetailedNameField"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/assessmentDetailedStartDateText"
+        android:layout_width="122dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="32dp"
+        android:text="Start Date:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/assessmentDetailedStartDateField"
+        app:layout_constraintHorizontal_bias="0.678"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailedTypeText" />
+
+    <TextView
+        android:id="@+id/addAssessmentDetailedEndDateText"
+        android:layout_width="107dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:text="End Date:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/assessmentDetailedEndDateField"
+        app:layout_constraintHorizontal_bias="0.704"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailedStartDateText" />
+
+    <Button
+        android:id="@+id/assessmentDetailedSaveButton"
+        android:layout_width="202dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="28dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.889"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/assessmentDetailedEndDateField"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="mm/dd/yyyy"
+        android:inputType="date"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailedStartDateField" />
+
+    <EditText
+        android:id="@+id/assessmentDetailedStartDateField"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="mm/dd/yyyy"
+        android:inputType="date"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailedTypeSpinner" />
+
+    <EditText
+        android:id="@+id/assessmentDetailedNameField"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Title"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/assessmentDetailedTypeText"
+        android:layout_width="138dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:text="Assessment Type:"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/assessmentDetailedTypeSpinner"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailedNameText" />
+
+    <Spinner
+        android:id="@+id/assessmentDetailedTypeSpinner"
+        android:layout_width="217dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailedNameField" />
+
+    <TextView
+        android:id="@+id/assessmentDetailedCoursesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="48dp"
+        android:text="Courses:"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addAssessmentDetailedEndDateText" />
+
+    <Spinner
+        android:id="@+id/assessmentDetailedCoursesSpinner"
+        android:layout_width="209dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Courses"
+        app:layout_constraintBottom_toTopOf="@+id/assessmentDetailedSaveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintStart_toEndOf="@+id/assessmentDetailedCoursesText"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailedEndDateField"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <Button
+        android:id="@+id/assessmentDetailDeleteButton"
+        android:layout_width="139dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="detailAssessmentDelete"
+        android:text="delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailEndReminderSwitch"
+        app:layout_constraintVertical_bias="0.985" />
+
+    <Switch
+        android:id="@+id/assessmentDetailEndReminderSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:text="End Date Reminder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailStartReminderSwitch"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/assessmentDetailStartReminderSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:text="Start Date Reminder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailedCoursesText"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
